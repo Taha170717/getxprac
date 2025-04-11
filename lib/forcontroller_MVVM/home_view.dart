@@ -2,6 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gtexprac/forcontroller_MVVM/myController.dart';
+import 'package:gtexprac/pages/firstpage.dart';
+
+import '../nextpage.dart';
 
 class HomePage extends StatelessWidget{
 
@@ -36,6 +39,7 @@ class HomePage extends StatelessWidget{
               ElevatedButton(onPressed: (){
                 var myController= Get.find<MyController>();
                 myController.incrementcount();
+                // Get.to(firstpage());
 
               }, child: Text("Increment"))
             ],

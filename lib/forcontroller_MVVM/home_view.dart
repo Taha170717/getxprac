@@ -5,7 +5,7 @@ import 'package:gtexprac/forcontroller_MVVM/myController.dart';
 
 class HomePage extends StatelessWidget{
 
-  //var myController = Get.put(MyController());
+  var myController = Get.put(MyController());
   @override
   Widget build(BuildContext context) {
     return  GetMaterialApp(
@@ -18,25 +18,21 @@ class HomePage extends StatelessWidget{
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              GetBuilder<MyController>(
-                init: MyController(),
-                      id: "123",
-                      // initState: (data)=> print("Init State Call"),
-                      // dispose: (data)=>print ("Contriller Disposed"),
-
-                      builder: (myController)=>Text("${myController.count}",style: TextStyle(
-                fontSize: 30
-              ),)
+              // GetBuilder<MyController>(
+              //   init: MyController(),
+              //         id: "123",
+              //         // initState: (data)=> print("Init State Call"),
+              //         // dispose: (data)=>print ("Contriller Disposed"),
+              //
+              //         builder: (myController)=>Text("${myController.count}",style: TextStyle(
+              //   fontSize: 30
+              // ),)
+              // ),
+              Obx(()=>
+                  Text("${myController.count}",
+                    style: TextStyle(fontSize: 30),),
               ),
-              GetBuilder<MyController>(
-                  init: MyController(),
-                  // initState: (data)=> print("Init State Call"),
-                  // dispose: (data)=>print ("Contriller Disposed"),
 
-                  builder: (myController)=>Text("${myController.count}",style: TextStyle(
-                      fontSize: 30
-                  ),)
-              ),
               ElevatedButton(onPressed: (){
                 var myController= Get.find<MyController>();
                 myController.incrementcount();

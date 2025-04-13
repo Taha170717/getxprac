@@ -39,7 +39,7 @@ class HomePage extends StatelessWidget{
               ElevatedButton(onPressed: (){
                 var myController= Get.find<MyController>();
                 myController.incrementcount();
-                // Get.to(firstpage());hweqweqwe
+                // Get.to(firstpage());hweqweqwekjasjdladjaasjdklkasd
 
               }, child: Text("Increment"))
             ],
